@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ListMoviesDisplayLogic: AnyObject {
-    func displaySomething()
+    func displayMovies()
 }
 
 final class ListMoviesViewController: UIViewController {
@@ -41,8 +41,7 @@ final class ListMoviesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // fetch movie api
-        viewModel?.doSomething()
+        viewModel?.fetchAllMovies()
     }
 
     // MARK: - Override Parent Methods
@@ -61,7 +60,7 @@ final class ListMoviesViewController: UIViewController {
 
 // MARK: - ListMoviesDisplayLogic Extension
 extension ListMoviesViewController: ListMoviesDisplayLogic {
-    func displaySomething() {
+    func displayMovies() {
         print("calling from view model")
     }
 }
