@@ -23,6 +23,7 @@
 		A47AF7DE2C5CC848004AC18F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7DD2C5CC848004AC18F /* Movie.swift */; };
 		A47AF7E42C5CC986004AC18F /* Error+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7DF2C5CC986004AC18F /* Error+Enum.swift */; };
 		A47AF7E52C5CC986004AC18F /* NetworkStatusCode+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7E12C5CC986004AC18F /* NetworkStatusCode+Enum.swift */; };
+		A47AF7EB2C5CD0EF004AC18F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A47AF7EA2C5CD0EF004AC18F /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47AF7EB2C5CD0EF004AC18F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +295,7 @@
 			);
 			name = "strattonshire-ventures-assessment";
 			packageProductDependencies = (
+				A47AF7EA2C5CD0EF004AC18F /* Kingfisher */,
 			);
 			productName = "strattonshire-ventures-assessment";
 			productReference = A47AF78E2C5CB08A004AC18F /* strattonshire-ventures-assessment.app */;
@@ -367,6 +370,7 @@
 			);
 			mainGroup = A47AF7852C5CB089004AC18F;
 			packageReferences = (
+				A47AF7E92C5CD0EF004AC18F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = A47AF78F2C5CB08A004AC18F /* Products */;
 			projectDirPath = "";
@@ -759,6 +763,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A47AF7E92C5CD0EF004AC18F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A47AF7EA2C5CD0EF004AC18F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A47AF7E92C5CD0EF004AC18F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A47AF79A2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodeld */ = {
