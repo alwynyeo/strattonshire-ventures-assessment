@@ -12,8 +12,6 @@ enum AppError: Error {
 enum NetworkError: Error {
     case invalidUrl
     case invalidResponse
-    case invalidData
-    case unableToComplete
     case statusCodeNotSuccess
-    case jsonDecodeFailure
+    case jsonDecodeFailure(Error)
 }

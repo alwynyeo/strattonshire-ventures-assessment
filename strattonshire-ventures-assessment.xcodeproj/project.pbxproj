@@ -19,6 +19,10 @@
 		A47AF7D22C5CC157004AC18F /* ListMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7D12C5CC157004AC18F /* ListMoviesViewModel.swift */; };
 		A47AF7D62C5CC4C2004AC18F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7D52C5CC4C2004AC18F /* Resources.swift */; };
 		A47AF7DA2C5CC4F5004AC18F /* Color+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7D92C5CC4F5004AC18F /* Color+Constant.swift */; };
+		A47AF7DC2C5CC664004AC18F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7DB2C5CC664004AC18F /* NetworkService.swift */; };
+		A47AF7DE2C5CC848004AC18F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7DD2C5CC848004AC18F /* Movie.swift */; };
+		A47AF7E42C5CC986004AC18F /* Error+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7DF2C5CC986004AC18F /* Error+Enum.swift */; };
+		A47AF7E52C5CC986004AC18F /* NetworkStatusCode+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7E12C5CC986004AC18F /* NetworkStatusCode+Enum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		A47AF7D12C5CC157004AC18F /* ListMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesViewModel.swift; sourceTree = "<group>"; };
 		A47AF7D52C5CC4C2004AC18F /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		A47AF7D92C5CC4F5004AC18F /* Color+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Constant.swift"; sourceTree = "<group>"; };
+		A47AF7DB2C5CC664004AC18F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A47AF7DD2C5CC848004AC18F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A47AF7DF2C5CC986004AC18F /* Error+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error+Enum.swift"; sourceTree = "<group>"; };
+		A47AF7E12C5CC986004AC18F /* NetworkStatusCode+Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkStatusCode+Enum.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,7 @@
 		A47AF7C82C5CBFF5004AC18F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A47AF7DD2C5CC848004AC18F /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +180,7 @@
 		A47AF7CA2C5CC073004AC18F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A47AF7E32C5CC986004AC18F /* Enums */,
 				A47AF7D72C5CC4D7004AC18F /* Constants */,
 			);
 			path = Shared;
@@ -206,6 +216,7 @@
 		A47AF7CE2C5CC0F1004AC18F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A47AF7DB2C5CC664004AC18F /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -240,6 +251,31 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		A47AF7E02C5CC986004AC18F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7DF2C5CC986004AC18F /* Error+Enum.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		A47AF7E22C5CC986004AC18F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7E12C5CC986004AC18F /* NetworkStatusCode+Enum.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A47AF7E32C5CC986004AC18F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7E02C5CC986004AC18F /* Error */,
+				A47AF7E22C5CC986004AC18F /* Network */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,6 +292,8 @@
 			dependencies = (
 			);
 			name = "strattonshire-ventures-assessment";
+			packageProductDependencies = (
+			);
 			productName = "strattonshire-ventures-assessment";
 			productReference = A47AF78E2C5CB08A004AC18F /* strattonshire-ventures-assessment.app */;
 			productType = "com.apple.product-type.application";
@@ -328,6 +366,8 @@
 				Base,
 			);
 			mainGroup = A47AF7852C5CB089004AC18F;
+			packageReferences = (
+			);
 			productRefGroup = A47AF78F2C5CB08A004AC18F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -372,7 +412,11 @@
 			files = (
 				A47AF79C2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodeld in Sources */,
 				A47AF7962C5CB08A004AC18F /* ListMoviesViewController.swift in Sources */,
+				A47AF7DE2C5CC848004AC18F /* Movie.swift in Sources */,
+				A47AF7E52C5CC986004AC18F /* NetworkStatusCode+Enum.swift in Sources */,
+				A47AF7DC2C5CC664004AC18F /* NetworkService.swift in Sources */,
 				A47AF7922C5CB08A004AC18F /* AppDelegate.swift in Sources */,
+				A47AF7E42C5CC986004AC18F /* Error+Enum.swift in Sources */,
 				A47AF7D62C5CC4C2004AC18F /* Resources.swift in Sources */,
 				A47AF7D22C5CC157004AC18F /* ListMoviesViewModel.swift in Sources */,
 				A47AF7DA2C5CC4F5004AC18F /* Color+Constant.swift in Sources */,
