@@ -41,8 +41,6 @@ extension ListMoviesViewModel: ListMoviesBusinessLogic {
                         print("Error: invalidURL under \(#function) at line \(#line) in \(#fileID) file.")
                     case .invalidResponse:
                         print("Error: invalidResponse under \(#function) at line \(#line) in \(#fileID) file.")
-                    case .unableToComplete:
-                        print("Error: unableToComplete under \(#function) at line \(#line) in \(#fileID) file.")
                     case .statusCodeNotSuccess:
                         print("Error: statusCodeNotSuccess under \(#function) at line \(#line) in \(#fileID) file.")
                     case .jsonDecodeFailure(let error):
