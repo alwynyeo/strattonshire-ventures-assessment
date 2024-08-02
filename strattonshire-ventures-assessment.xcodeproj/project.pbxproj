@@ -9,14 +9,16 @@
 /* Begin PBXBuildFile section */
 		A47AF7922C5CB08A004AC18F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7912C5CB08A004AC18F /* AppDelegate.swift */; };
 		A47AF7942C5CB08A004AC18F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7932C5CB08A004AC18F /* SceneDelegate.swift */; };
-		A47AF7962C5CB08A004AC18F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7952C5CB08A004AC18F /* ViewController.swift */; };
-		A47AF7992C5CB08A004AC18F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A47AF7982C5CB08A004AC18F /* Base */; };
+		A47AF7962C5CB08A004AC18F /* ListMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7952C5CB08A004AC18F /* ListMoviesViewController.swift */; };
 		A47AF79C2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47AF79A2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodeld */; };
 		A47AF79E2C5CB08D004AC18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A47AF79D2C5CB08D004AC18F /* Assets.xcassets */; };
 		A47AF7A12C5CB08D004AC18F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A47AF7A02C5CB08D004AC18F /* Base */; };
 		A47AF7AC2C5CB08D004AC18F /* strattonshire_ventures_assessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7AB2C5CB08D004AC18F /* strattonshire_ventures_assessmentTests.swift */; };
 		A47AF7B62C5CB08D004AC18F /* strattonshire_ventures_assessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7B52C5CB08D004AC18F /* strattonshire_ventures_assessmentUITests.swift */; };
 		A47AF7B82C5CB08D004AC18F /* strattonshire_ventures_assessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7B72C5CB08D004AC18F /* strattonshire_ventures_assessmentUITestsLaunchTests.swift */; };
+		A47AF7D22C5CC157004AC18F /* ListMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7D12C5CC157004AC18F /* ListMoviesViewModel.swift */; };
+		A47AF7D62C5CC4C2004AC18F /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7D52C5CC4C2004AC18F /* Resources.swift */; };
+		A47AF7DA2C5CC4F5004AC18F /* Color+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7D92C5CC4F5004AC18F /* Color+Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +42,7 @@
 		A47AF78E2C5CB08A004AC18F /* strattonshire-ventures-assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "strattonshire-ventures-assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47AF7912C5CB08A004AC18F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47AF7932C5CB08A004AC18F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A47AF7952C5CB08A004AC18F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A47AF7982C5CB08A004AC18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A47AF7952C5CB08A004AC18F /* ListMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesViewController.swift; sourceTree = "<group>"; };
 		A47AF79B2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = strattonshire_ventures_assessment.xcdatamodel; sourceTree = "<group>"; };
 		A47AF79D2C5CB08D004AC18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A47AF7A02C5CB08D004AC18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,9 @@
 		A47AF7B12C5CB08D004AC18F /* strattonshire-ventures-assessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "strattonshire-ventures-assessmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47AF7B52C5CB08D004AC18F /* strattonshire_ventures_assessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = strattonshire_ventures_assessmentUITests.swift; sourceTree = "<group>"; };
 		A47AF7B72C5CB08D004AC18F /* strattonshire_ventures_assessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = strattonshire_ventures_assessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A47AF7D12C5CC157004AC18F /* ListMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesViewModel.swift; sourceTree = "<group>"; };
+		A47AF7D52C5CC4C2004AC18F /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		A47AF7D92C5CC4F5004AC18F /* Color+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Constant.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +105,14 @@
 		A47AF7902C5CB08A004AC18F /* strattonshire-ventures-assessment */ = {
 			isa = PBXGroup;
 			children = (
-				A47AF7912C5CB08A004AC18F /* AppDelegate.swift */,
-				A47AF7932C5CB08A004AC18F /* SceneDelegate.swift */,
-				A47AF7952C5CB08A004AC18F /* ViewController.swift */,
-				A47AF7972C5CB08A004AC18F /* Main.storyboard */,
-				A47AF79D2C5CB08D004AC18F /* Assets.xcassets */,
+				A47AF7C92C5CC001004AC18F /* Services */,
+				A47AF7C82C5CBFF5004AC18F /* Models */,
+				A47AF7C62C5CBFC8004AC18F /* Scenes */,
+				A47AF7CA2C5CC073004AC18F /* Shared */,
+				A47AF7CB2C5CC07D004AC18F /* CoreData */,
+				A47AF7CC2C5CC09B004AC18F /* Resources */,
+				A47AF7CD2C5CC0A1004AC18F /* System */,
 				A47AF79F2C5CB08D004AC18F /* LaunchScreen.storyboard */,
-				A47AF7A22C5CB08D004AC18F /* Info.plist */,
-				A47AF79A2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodeld */,
 			);
 			path = "strattonshire-ventures-assessment";
 			sourceTree = "<group>";
@@ -128,6 +132,112 @@
 				A47AF7B72C5CB08D004AC18F /* strattonshire_ventures_assessmentUITestsLaunchTests.swift */,
 			);
 			path = "strattonshire-ventures-assessmentUITests";
+			sourceTree = "<group>";
+		};
+		A47AF7C62C5CBFC8004AC18F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7D02C5CC104004AC18F /* DetailMovie */,
+				A47AF7C72C5CBFCF004AC18F /* ListMovies */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A47AF7C72C5CBFCF004AC18F /* ListMovies */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7952C5CB08A004AC18F /* ListMoviesViewController.swift */,
+				A47AF7D12C5CC157004AC18F /* ListMoviesViewModel.swift */,
+			);
+			path = ListMovies;
+			sourceTree = "<group>";
+		};
+		A47AF7C82C5CBFF5004AC18F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A47AF7C92C5CC001004AC18F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7CF2C5CC0F6004AC18F /* Persistence */,
+				A47AF7CE2C5CC0F1004AC18F /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A47AF7CA2C5CC073004AC18F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7D72C5CC4D7004AC18F /* Constants */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A47AF7CB2C5CC07D004AC18F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF79A2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A47AF7CC2C5CC09B004AC18F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7A22C5CB08D004AC18F /* Info.plist */,
+				A47AF79D2C5CB08D004AC18F /* Assets.xcassets */,
+				A47AF7D52C5CC4C2004AC18F /* Resources.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A47AF7CD2C5CC0A1004AC18F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7932C5CB08A004AC18F /* SceneDelegate.swift */,
+				A47AF7912C5CB08A004AC18F /* AppDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		A47AF7CE2C5CC0F1004AC18F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A47AF7CF2C5CC0F6004AC18F /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		A47AF7D02C5CC104004AC18F /* DetailMovie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailMovie;
+			sourceTree = "<group>";
+		};
+		A47AF7D72C5CC4D7004AC18F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7D82C5CC4E3004AC18F /* UI */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A47AF7D82C5CC4E3004AC18F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A47AF7D92C5CC4F5004AC18F /* Color+Constant.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +346,6 @@
 			files = (
 				A47AF79E2C5CB08D004AC18F /* Assets.xcassets in Resources */,
 				A47AF7A12C5CB08D004AC18F /* Base in Resources */,
-				A47AF7992C5CB08A004AC18F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +371,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A47AF79C2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodeld in Sources */,
-				A47AF7962C5CB08A004AC18F /* ViewController.swift in Sources */,
+				A47AF7962C5CB08A004AC18F /* ListMoviesViewController.swift in Sources */,
 				A47AF7922C5CB08A004AC18F /* AppDelegate.swift in Sources */,
+				A47AF7D62C5CC4C2004AC18F /* Resources.swift in Sources */,
+				A47AF7D22C5CC157004AC18F /* ListMoviesViewModel.swift in Sources */,
+				A47AF7DA2C5CC4F5004AC18F /* Color+Constant.swift in Sources */,
 				A47AF7942C5CB08A004AC18F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,14 +413,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A47AF7972C5CB08A004AC18F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A47AF7982C5CB08A004AC18F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A47AF79F2C5CB08D004AC18F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -448,10 +552,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7JP6349F9Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "strattonshire-ventures-assessment/Info.plist";
+				INFOPLIST_FILE = "strattonshire-ventures-assessment/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -476,10 +580,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7JP6349F9Y;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "strattonshire-ventures-assessment/Info.plist";
+				INFOPLIST_FILE = "strattonshire-ventures-assessment/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
