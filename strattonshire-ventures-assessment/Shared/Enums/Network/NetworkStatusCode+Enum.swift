@@ -1,8 +1,8 @@
 //
 //  NetworkStatusCode+Enum.swift
-//  mindvalleyassessment
+//  strattonshire-ventures-assessment
 //
-//  Created by Alwyn Yeo on 6/10/24.
+//  Created by Alwyn Yeo on 8/2/24.
 //
 
 enum NetworkStatusCode: Int {
