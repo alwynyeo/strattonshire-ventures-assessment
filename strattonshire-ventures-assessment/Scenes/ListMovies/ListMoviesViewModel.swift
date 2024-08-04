@@ -12,8 +12,6 @@ final class ListMoviesViewModel {
 
     weak var view: ListMoviesDisplayLogic?
 
-    var persistenceService: PersistenceService
-
     var networkService: NetworkService?
 
     private var allMovies: [ListMovieCellItem] = []
@@ -44,11 +42,9 @@ final class ListMoviesViewModel {
 
     init(
         view: ListMoviesDisplayLogic?,
-        networkService: NetworkService,
-        persistenceService: PersistenceService
+        networkService: NetworkService
     ) {
         self.view = view
-        self.persistenceService = persistenceService
         self.networkService = networkService
     }
 

@@ -77,11 +77,9 @@ final class ListMoviesViewController: UICollectionViewController {
     private func setUp() {
         let viewController = self
         let networkService = NetworkService.shared
-        let persistenceService = PersistenceService.shared
         let viewModel = ListMoviesViewModel(
             view: viewController,
-            networkService: networkService, 
-            persistenceService: persistenceService
+            networkService: networkService
         )
         viewController.viewModel = viewModel
     }
