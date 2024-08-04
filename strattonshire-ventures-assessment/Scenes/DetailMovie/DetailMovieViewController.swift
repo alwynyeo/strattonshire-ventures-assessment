@@ -138,7 +138,7 @@ extension DetailMovieViewController: DetailMovieDisplayLogic {}
 // MARK: - Programmatic UI Configuration
 private extension DetailMovieViewController {
     func configureUI() {
-        view.backgroundColor = Resources.Color.backgroundColor
+        view.backgroundColor = Resources.Color.whiteBackgroundColor
         configureNavigationBar()
         configureScrollView()
         configureScrollContentView()

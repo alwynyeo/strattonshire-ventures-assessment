@@ -9,6 +9,7 @@ import UIKit
 
 extension Resources.Color {
     static let backgroundColor = UIColor(hexString: "#f5f5f5")
+    static let whiteBackgroundColor = UIColor.white
     static let cellBackgroundColor = UIColor.white
     static let darkGray = UIColor.darkGray
     static let text = UIColor.darkText
