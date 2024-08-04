@@ -81,6 +81,7 @@
 		A421E42B2C5EDAE3001746DB /* UIView+ActivityIndicator+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator+Extension.swift"; sourceTree = "<group>"; };
 		A421E42E2C5EE322001746DB /* MovieEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A421E4312C5EE458001746DB /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		A421E4352C5F7773001746DB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A47AF78E2C5CB08A004AC18F /* strattonshire-ventures-assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "strattonshire-ventures-assessment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47AF7912C5CB08A004AC18F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A47AF7932C5CB08A004AC18F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +221,7 @@
 		A47AF7852C5CB089004AC18F = {
 			isa = PBXGroup;
 			children = (
+				A421E4352C5F7773001746DB /* README.md */,
 				A47AF7902C5CB08A004AC18F /* strattonshire-ventures-assessment */,
 				A47AF7AA2C5CB08D004AC18F /* strattonshire-ventures-assessmentTests */,
 				A47AF7B42C5CB08D004AC18F /* strattonshire-ventures-assessmentUITests */,
