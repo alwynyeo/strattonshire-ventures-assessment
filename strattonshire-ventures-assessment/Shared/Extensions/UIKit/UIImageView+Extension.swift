@@ -54,9 +54,9 @@ extension UIImageView {
             ]
         ) { result in
             switch result {
-                case ResultType.success(let value): break
+                case ResultType.success(_): break
 //                    print("Kingfisher Task done for: \(value.source.url?.absoluteString ?? "")")
-                case ResultType.failure(let error): break
+                case ResultType.failure(_): break
 //                    print("Kingfisher Job failed: \(error.localizedDescription)")
             }
         }
