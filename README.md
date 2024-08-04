@@ -11,7 +11,7 @@ Architecture
 
 ### MVVM (Model-View-ViewModel)
 
--   **Model**: Represents the data structure and the business logic.
+-   **Model**: Represents the data structure.
 -   **View**: Displays the data to the user and handles user interactions.
 -   **ViewModel**: Acts as a mediator between the View and Model. It retrieves data from the Network Service and updates the View.
 
@@ -58,8 +58,10 @@ Tech Stack
 -   **Layout**:
 
     -   UICollectionView
-    -   UICollectionViewDiffableDataSource
     -   UICollectionViewCompositionalLayout
+-   **Data Source**:
+
+    -   UICollectionViewDiffableDataSource
 -   **Package Manager**:
 
     -   Swift Package Manager
