@@ -18,6 +18,8 @@ final class NetworkService {
 
     private var urlComponents: URLComponents
 
+    private var persistenceService: PersistenceService
+
     // MARK: - Object Lifecycle
 
     private init() {
@@ -27,7 +29,7 @@ final class NetworkService {
         urlSessionConfiguration.multipathServiceType = URLSessionConfiguration.MultipathServiceType.handover
         urlSessionConfiguration.allowsCellularAccess = true
         urlSessionConfiguration.timeoutIntervalForRequest = 30 // 30 seconds
-        urlSessionConfiguration.timeoutIntervalForResource = 15 // 10 seconds
+        urlSessionConfiguration.timeoutIntervalForResource = 5 // 5 seconds
         urlSession = URLSession(configuration: urlSessionConfiguration)
 
         // JSONDecoder
@@ -39,11 +41,79 @@ final class NetworkService {
         urlComponents.scheme = "https"
         urlComponents.host = "freetestapi.com"
         self.urlComponents = urlComponents
+
+        // PersistenceService
+        let persistenceService = PersistenceService.shared
+        self.persistenceService = persistenceService
+    }
+
+    // MARK: - Helpers
+
+    // Validate the HTTP response
+    private func validateResponse(_ response: URLResponse) throws {
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw NetworkError.invalidResponse
+        }
+        guard httpResponse.statusCode == NetworkStatusCode.success.rawValue else {
+            throw NetworkError.statusCodeNotSuccess
+        }
+    }
+
+    // Fetch data from the URL
+    private func fetchData(from url: URL) async throws -> (Data, URLResponse) {
+        do {
+            let (data, response) = try await urlSession.data(from: url)
+            return (data, response)
+        } catch let error {
+            print("Error: '\(error.localizedDescription)' happened under \(#function) at line \(#line) in \(#fileID) file.")
+            throw NetworkError.requestTimeout
+        }
+    }
+
+    // Decode movies from JSON data
+    private func decodeMovies(from data: Data) throws -> [Movie] {
+        do {
+            let movies = try decoder.decode([Movie].self, from: data)
+            return movies
+        } catch let error {
+            print("Error: '\(error.localizedDescription)' happened under \(#function) at line \(#line) in \(#fileID) file.")
+            throw NetworkError.jsonDecodeFailure(error)
+        }
+    }
+
+    // Fetch and set image dimensions for each movie
+    private func fetchAndSetMovieDimensions(movies: [Movie]) async -> [Movie] {
+        var updatedMovies: [Movie] = []
+
+        for movie in movies {
+            async let imageAspectRatio = fetchImageDimensions(for: movie.poster)
+            var updatedMovie = movie
+            if let (width, height) = await imageAspectRatio {
+                updatedMovie.posterImageWidth = width
+                updatedMovie.posterImageHeight = height
+            }
+            updatedMovies.append(updatedMovie)
+        }
+
+        return updatedMovies
+    }
+
+
+    // Fetch image dimensions from URL
+    private func fetchImageDimensions(for posterString: String?) async -> (CGFloat, CGFloat)? {
+        guard let posterString = posterString, let url = URL(string: posterString) else { return nil }
+        return url.getImageAspectRatio()
+    }
+
+    // Fetch movies from persistence service
+    private func fetchMoviesFromPersistence() -> [Movie] {
+        return persistenceService.fetchAllMovies()
     }
 }
 
 // MARK: - Public API
 extension NetworkService {
+    // Fetch all movies from API
     func fetchAllMovies() async throws -> [Movie] {
         urlComponents.path = "/api/v1/movies"
 
@@ -51,23 +121,17 @@ extension NetworkService {
             throw NetworkError.invalidUrl
         }
 
-        let (data, response) = try await urlSession.data(from: url)
-
-        guard let response = response as? HTTPURLResponse else {
-            throw NetworkError.invalidResponse
-        }
-
-        let statusCode = response.statusCode
-
-        guard statusCode == NetworkStatusCode.success.rawValue else {
-            throw NetworkError.statusCodeNotSuccess
-        }
-
         do {
-            let movies = try decoder.decode([Movie].self, from: data)
+            let (data, response) = try await fetchData(from: url)
+            try validateResponse(response)
+            var movies = try decodeMovies(from: data)
+            movies = await fetchAndSetMovieDimensions(movies: movies)
+            persistenceService.persist(movies: movies)
             return movies
-        } catch let error {
-            throw NetworkError.jsonDecodeFailure(error)
+        } catch {
+            print("Error: '\(error.localizedDescription)' happened under \(#function) at line \(#line) in \(#fileID) file.")
+            let movies = fetchMoviesFromPersistence()
+            return movies
         }
     }
 }
