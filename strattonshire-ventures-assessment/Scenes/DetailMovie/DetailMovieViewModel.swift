@@ -5,7 +5,6 @@
 //  Created by Alwyn Yeo on 8/4/24.
 //
 
-import Foundation
 
 final class DetailMovieViewModel {
     // MARK: - Declarations

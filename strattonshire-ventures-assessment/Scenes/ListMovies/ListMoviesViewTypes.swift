@@ -5,7 +5,12 @@
 //  Created by Alwyn Yeo on 8/3/24.
 //
 
-import Foundation
+import UIKit
+
+enum ListMoviesViewControllerDataSourceSection: CaseIterable { case main }
+typealias ListMoviesViewControllerDataSourceItem = ListMovieCellItem
+typealias ListMoviesViewControllerDataSource = UICollectionViewDiffableDataSource<ListMoviesViewControllerDataSourceSection, ListMoviesViewControllerDataSourceItem>
+typealias ListMoviesViewControllerDataSourceSnapshot = NSDiffableDataSourceSnapshot<ListMoviesViewControllerDataSourceSection, ListMoviesViewControllerDataSourceItem>
 
 protocol ListMoviesDisplayLogic: AnyObject {
     func displayLoadedMovies(layoutConfigurations: [PinterestLayoutConfiguration])

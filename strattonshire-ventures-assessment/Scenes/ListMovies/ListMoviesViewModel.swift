@@ -32,19 +32,22 @@ final class ListMoviesViewModel {
 
     private var queryText = ""
 
+    private let mainQueue = DispatchQueue.main
+
     var dataSource: ListMoviesViewControllerDataSource?
 
     var isSearching: Bool = false
 
     var isSameQuery: Bool = false
 
-    private let mainQueue = DispatchQueue.main
-
     // MARK: - Object Lifecycle
 
-    init() {
-        let persistenceService = PersistenceService.shared
-        let networkService = NetworkService.shared
+    init(
+        view: ListMoviesDisplayLogic?,
+        networkService: NetworkService,
+        persistenceService: PersistenceService
+    ) {
+        self.view = view
         self.persistenceService = persistenceService
         self.networkService = networkService
     }

@@ -7,15 +7,8 @@
 
 import UIKit
 
-enum ListMoviesViewControllerDataSourceSection: CaseIterable { case main }
-typealias ListMoviesViewControllerDataSourceItem = ListMovieCellItem
-typealias ListMoviesViewControllerDataSource = UICollectionViewDiffableDataSource<ListMoviesViewControllerDataSourceSection, ListMoviesViewControllerDataSourceItem>
-typealias ListMoviesViewControllerDataSourceSnapshot = NSDiffableDataSourceSnapshot<ListMoviesViewControllerDataSourceSection, ListMoviesViewControllerDataSourceItem>
-
 final class ListMoviesViewController: UICollectionViewController {
     // MARK: - Declarations
-
-    typealias CompositionalLayout = UICollectionViewCompositionalLayout
 
     var viewModel: ListMoviesBusinessLogic?
 
@@ -83,8 +76,13 @@ final class ListMoviesViewController: UICollectionViewController {
 
     private func setUp() {
         let viewController = self
-        let viewModel = ListMoviesViewModel()
-        viewModel.view = viewController
+        let networkService = NetworkService.shared
+        let persistenceService = PersistenceService.shared
+        let viewModel = ListMoviesViewModel(
+            view: viewController,
+            networkService: networkService, 
+            persistenceService: persistenceService
+        )
         viewController.viewModel = viewModel
     }
 
