@@ -83,3 +83,28 @@ Tech Stack
 -   **API**:
 
     -   [Free Test API](https://freetestapi.com/)
+
+
+Running the App on a Simulator
+------------------------------
+
+To run the app on a simulator, follow these steps:
+
+1. **Clone the repository**:
+    ```bash
+    git clone git@github.com:alwynyeo/strattonshire-ventures-assessment.git
+    cd strattonshire-ventures-assessment
+    ```
+
+2. **Open the project in Xcode**:
+    ```bash
+    open strattonshire-ventures-assessment.xcodeproj
+    ```
+
+3. **Create schemes**:
+    - In Xcode, go to `Product` -> `Scheme` -> `Manage Schemes...`
+    - Click on the `Autocreate Schemes Now` button to generate the necessary schemes.
+
+4. **Run the app**:
+    - Select the desired simulator (e.g., iPhone 14) from the device toolbar.
+    - Press `Cmd + R` to build and run the app on the selected simulator.
