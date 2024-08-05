@@ -28,7 +28,6 @@
 		A47AF7942C5CB08A004AC18F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7932C5CB08A004AC18F /* SceneDelegate.swift */; };
 		A47AF7962C5CB08A004AC18F /* ListMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7952C5CB08A004AC18F /* ListMoviesViewController.swift */; };
 		A47AF79C2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A47AF79A2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodeld */; };
-		A47AF79E2C5CB08D004AC18F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A47AF79D2C5CB08D004AC18F /* Assets.xcassets */; };
 		A47AF7A12C5CB08D004AC18F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A47AF7A02C5CB08D004AC18F /* Base */; };
 		A47AF7AC2C5CB08D004AC18F /* strattonshire_ventures_assessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7AB2C5CB08D004AC18F /* strattonshire_ventures_assessmentTests.swift */; };
 		A47AF7B62C5CB08D004AC18F /* strattonshire_ventures_assessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7B52C5CB08D004AC18F /* strattonshire_ventures_assessmentUITests.swift */; };
@@ -44,6 +43,7 @@
 		A47AF8022C5CDAF3004AC18F /* MovieEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF7FC2C5CDAF3004AC18F /* MovieEntity+CoreDataClass.swift */; };
 		A47AF80A2C5CDBAE004AC18F /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF8092C5CDBAE004AC18F /* PersistenceService.swift */; };
 		A47AF80E2C5CE12B004AC18F /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AF80D2C5CE12B004AC18F /* Collection+Extension.swift */; };
+		A49C4E782C609DFF00981460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A49C4E772C609DFF00981460 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,6 @@
 		A47AF7932C5CB08A004AC18F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A47AF7952C5CB08A004AC18F /* ListMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesViewController.swift; sourceTree = "<group>"; };
 		A47AF79B2C5CB08A004AC18F /* strattonshire_ventures_assessment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = strattonshire_ventures_assessment.xcdatamodel; sourceTree = "<group>"; };
-		A47AF79D2C5CB08D004AC18F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A47AF7A02C5CB08D004AC18F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A47AF7A22C5CB08D004AC18F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A47AF7A72C5CB08D004AC18F /* strattonshire-ventures-assessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "strattonshire-ventures-assessmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +104,7 @@
 		A47AF7FC2C5CDAF3004AC18F /* MovieEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A47AF8092C5CDBAE004AC18F /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		A47AF80D2C5CE12B004AC18F /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		A49C4E772C609DFF00981460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,8 +332,8 @@
 			isa = PBXGroup;
 			children = (
 				A47AF7A22C5CB08D004AC18F /* Info.plist */,
-				A47AF79D2C5CB08D004AC18F /* Assets.xcassets */,
 				A47AF7D52C5CC4C2004AC18F /* Resources.swift */,
+				A49C4E772C609DFF00981460 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -570,7 +570,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47AF79E2C5CB08D004AC18F /* Assets.xcassets in Resources */,
+				A49C4E782C609DFF00981460 /* Assets.xcassets in Resources */,
 				A47AF7A12C5CB08D004AC18F /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
